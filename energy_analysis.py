@@ -1,8 +1,8 @@
 # Data: Energy Institute – Statistical Review of World Energy (2025)
 # via Our World in Data (CC BY 4.0) – https://ourworldindata.org
 
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 RENEWABLES = ["Hydropower", "Wind", "Solar", "Biofuels", "Other renewables"]
 FOSSILS = ["Gas", "Coal", "Oil"]

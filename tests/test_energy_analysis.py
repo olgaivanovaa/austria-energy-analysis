@@ -7,7 +7,7 @@ import pytest
 
 matplotlib.use("Agg")  # non-interactive backend for CI
 
-from energy_analysis import load_data, total_consumption, renewable_share, plot_energy_mix
+from energy_analysis import load_data, plot_energy_mix, renewable_share, total_consumption
 
 # ── Shared fixture ────────────────────────────────────────────────────────────
 
@@ -55,4 +55,3 @@ def test_plot_energy_mix(df):
     with patch("matplotlib.pyplot.show") as mock_show:
         plot_energy_mix(df, 2023)
         mock_show.assert_called_once()
-        

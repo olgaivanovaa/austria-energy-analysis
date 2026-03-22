@@ -1,4 +1,4 @@
-from energy_analysis import load_data, total_consumption, renewable_share, plot_energy_mix
+from energy_analysis import load_data, plot_energy_mix, renewable_share, total_consumption
 
 print("=" * 50)
 print("       Austria Energy Analysis")
