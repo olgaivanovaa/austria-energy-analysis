@@ -87,7 +87,7 @@ pip install -r requirements.txt
 
 **Run the analysis:**
 ```bash
-python energy_analysis.py
+python main.py
 ```
 
 **Run the tests:**
