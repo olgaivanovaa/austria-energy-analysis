@@ -101,12 +101,18 @@ pytest
 
 ```
 austria-energy-analysis/
-├── energy_analysis.py        # main code with all four functions
-├── conftest.py               # makes tests/ folder work with pytest
-├── requirements.txt          # dependencies: pandas, matplotlib, pytest
-├── README.md                 # this file
+├── .github/
+│   └── workflows/
+│       └── ci.yml            # runs ruff and pytest automatically on GitHub
 ├── data/
-│   └── austria_energy.csv    # filtered dataset for Austria
-└── tests/
-    └── test_energy_analysis.py  # one test per function
+│   └── austria_energy.csv    # Austrian energy data file
+├── tests/
+│   └── test_energy_analysis.py  # tests for functions
+├── .gitignore                # tells Git which files to ignore for repo
+├── energy_analysis.py        # main code with functions
+├── LICENSE                   # MIT open source license
+├── main.py                   # runs all functions and shows results
+├── pyproject.toml            # ruff linter settings
+├── README.md                 # project description and usage
+└── requirements.txt          # dependencies: pandas, matplotlib, pytest, ruff
 ```
