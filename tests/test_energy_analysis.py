@@ -1,9 +1,12 @@
-import pytest
-import pandas as pd
-import matplotlib
-matplotlib.use("Agg")  # non-interactive backend for CI
 from io import StringIO
 from unittest.mock import patch
+
+import matplotlib
+import pandas as pd
+import pytest
+
+matplotlib.use("Agg")  # non-interactive backend for CI
+
 from energy_analysis import load_data, total_consumption, renewable_share, plot_energy_mix
 
 # ── Shared fixture ────────────────────────────────────────────────────────────
@@ -39,7 +42,7 @@ def test_total_consumption(df):
 
 
 def test_total_consumption_missing_year(df):
-    with pytest.raises(ValueError, match="No data for 1800"):
+    with pytest.raises(ValueError, match="No data for 1800."):
         total_consumption(df, 1800)
 
 
@@ -52,3 +55,4 @@ def test_plot_energy_mix(df):
     with patch("matplotlib.pyplot.show") as mock_show:
         plot_energy_mix(df, 2023)
         mock_show.assert_called_once()
+        
